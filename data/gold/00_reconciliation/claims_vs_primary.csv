@@ -1,0 +1,11 @@
+claim,as_quoted,claimed,source,primary_headline_basis,primary_reported_basis,verdict
+rtt_incomplete_pathways,7.37 million pathways,7370000.0,BMA / Healthcare Management,7370100.0,7158164.0,"measure: 7,370,100 incl. estimates rounds to 7.37m (holds); my primary measure is 7,158,164"
+rtt_unique_patients,6.24 million patients,6240000.0,BMA / Healthcare Management,6242270.83,,"sourced: WLMDS ratio 0.8470 × 7,370,100 = 6,242,271; an estimate, not a count, not rebuildable"
+rtt_change_on_july,"up 41,848 on July",41848.0,Healthcare Management,41848.0,26479.0,"measure: headline +41,848 (exact); reported +26,479"
+rtt_over_52_weeks,"~113,000 waiting more than a year",113000.0,BMA,113339.0,109936.0,"measure: headline 113,339 (holds); reported 109,936"
+rtt_over_52_change,"+7,000 over 52 weeks (article title)",7000.0,article brief,1960.0,1673.0,"does not reconcile: Jul->Aug +1,960 headline / +1,673 reported"
+rtt_over_52_pct_change,over-52-week group grew by roughly six per cent,6.0,article brief,1.76,1.55,does not reconcile: Jul->Aug +1.8% headline / +1.5% reported
+rtt_total_pct_change,list grew by well under one per cent,1.0,article brief,0.57,0.37,holds: Jul->Aug +0.57% headline / +0.37% reported
+rtt_median_weeks,median wait 12.2 weeks,12.2,BMA,,12.21,rounding: 12.21 weeks from bands (reported basis; NHS England publishes no headline-basis median)
+cwt_62d_pct,62-day performance 71.9 per cent,71.9,BMA,,71.9,"rounding: 71.90%, provider basis, provisional"
+cwt_fds_pct,28-day faster diagnosis 78.6 per cent,78.6,BMA,,78.56,"rounding: 78.56%, provider basis, provisional"

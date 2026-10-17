@@ -1,0 +1,52 @@
+gate,check,published,rebuilt,diff,pass,note
+A,2026-08 incomplete: same provider set (zero-pathway listings allowed),533,532,-1.0,True,"1 workbook-only providers, all with 0 pathways; none missing from the workbook"
+A,"2026-08 incomplete: total, provider by provider",7158164,7158164,0.0,True,all providers exact
+A,"2026-08 incomplete: within_18, provider by provider",4667554,4667554,0.0,True,all providers exact
+A,"2026-08 incomplete: over_52, provider by provider",109936,109936,0.0,True,all providers exact
+A,"2026-08 incomplete: over_104, provider by provider",220,220,0.0,True,all providers exact
+A,2026-08 incomplete_dta: same provider set (zero-pathway listings allowed),533,480,-53.0,True,"53 workbook-only providers, all with 0 pathways; none missing from the workbook"
+A,"2026-08 incomplete_dta: total, provider by provider",1183326,1183326,0.0,True,all providers exact
+A,"2026-08 incomplete_dta: over_104, provider by provider",61,61,0.0,True,all providers exact
+A,2026-07 incomplete: same provider set (zero-pathway listings allowed),533,533,0.0,True,"0 workbook-only providers, all with 0 pathways; none missing from the workbook"
+A,"2026-07 incomplete: total, provider by provider",7131685,7131685,0.0,True,all providers exact
+A,"2026-07 incomplete: within_18, provider by provider",4657059,4657059,0.0,True,all providers exact
+A,"2026-07 incomplete: over_52, provider by provider",108263,108263,0.0,True,all providers exact
+A,"2026-07 incomplete: over_104, provider by provider",232,232,0.0,True,all providers exact
+A,2026-07 incomplete_dta: same provider set (zero-pathway listings allowed),533,480,-53.0,True,"53 workbook-only providers, all with 0 pathways; none missing from the workbook"
+A,"2026-07 incomplete_dta: total, provider by provider",1193791,1193791,0.0,True,all providers exact
+A,"2026-07 incomplete_dta: over_104, provider by provider",89,89,0.0,True,all providers exact
+A',Jul26 total = Two Maps,7131685,7131685,0.0,True,proves this pipeline uses the Two Maps measure
+A',Jul26 over 52 = Two Maps,108263,108263,0.0,True,
+A,Aug26 total = press notice Table 1 (not incl. estimates),7158164,7158164,0.0,True,
+A,"Apr25-Aug26 total vs Overview reported column, each month",122664259,122664259,0.0,True,all 17 months exact
+A,"Apr25-Aug26 within_18 vs Overview reported column, each month",76964362,76964362,0.0,True,all 17 months exact
+A,"Apr25-Aug26 over_18 vs Overview reported column, each month",45699897,45699897,0.0,True,all 17 months exact
+A,"Apr25-Aug26 over_52 vs Overview reported column, each month",2467442,2467442,0.0,True,all 17 months exact
+B,each estimate = that trust's base-month total in my Silver,1662656,1662656,0.0,True,24 trust-months estimated
+B,"Apr25-Aug26 total_est = reported + carry-forward, each month",124326915,124326915,0.0,True,all 17 months exact
+B,"Apr25-Aug26 over_52_est = reported + carry-forward, each month",2497878,2497878,0.0,True,all 17 months exact
+B,"Apr25-Aug26 over_18_est = reported + carry-forward, each month",46257209,46257209,0.0,True,all 17 months exact
+B,Aug26 over 52 (incl. estimates) = press notice,113339,113339,0.0,True,
+B,"Aug26 pathways (incl. estimates), to the notice's 0.1m",7.4,7.4,0.0,True,
+B,Aug26 % within 18 weeks (incl. estimates),65.2,65.2,0.0,True,
+B,Aug26 vs Aug25 fall in pathways (incl. estimates),33512,33512,0.0,True,
+M,Aug26 median weeks,12.2,12.2,0.0,True,
+M,Aug26 92nd percentile weeks,38.8,38.8,0.0,True,
+M,"Apr25-Aug26 median vs Overview series, each month (2 d.p.)",12.84,12.84,0.0,True,max |diff| 0.000 weeks
+P,"Overview ratio, to 2 d.p. = the notice's 85:100",0.85,0.85,0.0,True,"SOURCED from WLMDS, not rebuildable from provider files"
+P,patients = ratio × pathways incl. estimates,6242271,6242271,0.0,True,consistency of NHS England's own arithmetic only
+P,"patients, to the notice's 0.1m",6.2,6.2,0.0,True,
+C,FDS 2026-07 % vs release,79.3,79.3,0.0,True,
+C,FDS 2026-07 total & within vs national time series,"308,370/244,594","308,370/244,594",,True,
+C,FDS 2026-08 % vs release,78.6,78.6,0.0,True,
+C,FDS 2026-08 total & within vs national time series,"273,664/214,991","273,664/214,991",,True,
+C,31D 2026-07 % vs release,92.5,92.5,0.0,True,
+C,31D 2026-07 total & within vs national time series,"62,098/57,442","62,098/57,442",,True,
+C,31D 2026-08 % vs release,92.1,92.1,0.0,True,
+C,31D 2026-08 total & within vs national time series,"55,049/50,701","55,049/50,701",,True,
+C,62D 2026-07 % vs release,71.2,71.2,0.0,True,
+C,62D 2026-07 total & within vs national time series,"31,519/22,428","31,519/22,428",,True,
+C,62D 2026-08 % vs release,71.9,71.9,0.0,True,
+C,62D 2026-08 total & within vs national time series,"27,909/20,066","27,909/20,066",,True,
+C,FDS Aug26 referrals seen vs release,273664,273664,0.0,True,
+C,62D Aug26 treated vs release,27909,27909,0.0,True,

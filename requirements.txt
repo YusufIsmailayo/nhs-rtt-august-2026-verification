@@ -1,0 +1,8 @@
+# Minimum versions I have run this pipeline against (Python 3.12).
+requests>=2.31
+pandas>=2.2
+pyarrow>=14.0
+openpyxl>=3.1
+pypdf>=4.0
+jupyter
+nbconvert>=7.0

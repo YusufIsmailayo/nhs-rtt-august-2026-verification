@@ -1,0 +1,11 @@
+# Raw NHS England payloads: re-downloaded by notebooks/01_bronze.ipynb from the URLs
+# in src/sources.py; each data/bronze/*/metadata.json records the SHA-256 I got.
+data/bronze/
+
+# Silver is rebuilt from Bronze by notebooks 02-03.
+data/silver/
+
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+*.part
