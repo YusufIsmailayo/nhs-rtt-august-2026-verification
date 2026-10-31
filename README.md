@@ -5,7 +5,7 @@ test a claim *before* I write about it. Every figure I had for the August 2026
 release came from secondary sources (the BMA's compilation and Healthcare
 Management). This pipeline rebuilds them from NHS England's own files.
 
-**Status: reconciliation gate PASSES (51 of 51 checks). Notebooks 00–09 built; the findings table is `data/gold/08_findings/findings.csv` (readable copy: `findings.md`). No article has been written.**
+**Status: reconciliation gate PASSES (51 of 51 checks). Notebooks 00–09 built; the findings table is `data/gold/08_findings/findings.csv` (readable copy: `findings.md`). The article is drafted; the link will follow on publication.**
 
 ## Run order
 
