@@ -1,0 +1,17 @@
+gate,check,pass,note
+F1,"headline identity closes, every month Apr25-Sep26",True,all months close
+F1,headline: completed = admitted + non-admitted,True,max |residual| 0.00e+00
+F1,headline: total removals = completed + unreported,True,max |residual| 0.00e+00
+F1,headline: share = unreported / total removals,True,max |residual| 0.00e+00
+F2,headline end-of-month list = main gate's rebuilt headline,True,max |diff| 0.00e+00
+F1,fractions occur only in months with estimated trusts,True,"13 fractional months, 15 months with estimates"
+F1,"fractions occur only in 'with estimates' flow columns, never in the list",True,
+F3,"reported identity closes, every month Apr25-Sep26",True,all months close
+F3,reported: completed = admitted + non-admitted,True,max |residual| 0.00e+00
+F3,reported: total removals = completed + unreported,True,max |residual| 0.00e+00
+F3,reported flows are whole numbers,True,
+F4,"provider starts sum = NHS England's reported national figure, every month",True,all months exact
+F4,"provider admitted sum = NHS England's reported national figure, every month",True,all months exact
+F4,"provider nonadmitted sum = NHS England's reported national figure, every month",True,all months exact
+F4,"provider incomplete sum = NHS England's reported national figure, every month",True,all months exact
+F5,"provider unreported removals sum to the national reported figure, May25-Sep26",True,all months exact
