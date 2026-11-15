@@ -7,6 +7,8 @@ Management). This pipeline rebuilds them from NHS England's own files.
 
 **Status: reconciliation gate PASSES (51 of 51 checks). Notebooks 00–09 built; the findings table is `data/gold/08_findings/findings.csv` (readable copy: `findings.md`). Article: [The NHS Hit Its 18-Week Target in March. Its Longest Waits Have Grown Every Month Since.](https://medium.com/@yusufismail_91982/the-nhs-hit-its-18-week-target-in-march-its-longest-waits-have-grown-every-month-since-a06ee6a22333) (Medium, November 2026).**
 
+**Status (branch `flows-2026`):** evidence for a piece on how pathways leave the RTT waiting list. Notebooks 10–12 check that the list identity (start + clock starts − reported completions − derived unreported removals = end) closes every month from April 2025 to September 2026, list the claims that hold in `data/gold/11_flows_findings/findings.md`, and draw the chart. The flows gate passes 16 of 16 and the main gate 52 of 52. Article: link to follow.
+
 ## Run order
 
 ```
