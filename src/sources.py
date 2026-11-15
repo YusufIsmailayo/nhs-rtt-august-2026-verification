@@ -44,6 +44,10 @@ RTT_FULL_CSV = [
     ("2026-06", f"{NHSE}/2026/08/Full-CSV-data-file-Jun26-ZIP-3M-6jPlxd.zip", "as first published"),
     ("2026-07", f"{NHSE}/2026/09/Full-CSV-data-file-Jul26-ZIP-4M-97ylx5.zip", "as first published"),
     ("2026-08", f"{NHSE}/2026/10/Full-CSV-data-file-Aug26-ZIP-3M-vjgRdG.zip", "as first published"),
+    # September 2026, released 12 November 2026. Added for the September re-run;
+    # every earlier month's URL above was re-checked against both RTT pages that
+    # day and none had been republished as revised.
+    ("2026-09", f"{NHSE}/2026/11/Full-CSV-data-file-Sep26-ZIP-3M-ojyW5x.zip", "as first published"),
 ]
 
 SOURCES: list[dict] = []
@@ -195,6 +199,107 @@ SOURCES += [
              "Final 2025-26 months. Needed only for August 2025, so 'improved year on year' is tested rather than quoted."),
         ],
         "grain": "as above",
+        "primary": True,
+        "reuse_from": None,
+    },
+]
+
+# ----------------------------------------------------------------------------
+# September 2026 vintage, released 12 November 2026 (gov.uk RTT page and the
+# CWT 2026-27 page both give that date). These sit in their own *_2026-09
+# folders and never replace the August ones: the August vintage is what the
+# published article rests on, and keeping both lets me diff what NHS England
+# restated between the two releases (the Overview series and the cumulative
+# CWT file both republish every earlier month).
+# ----------------------------------------------------------------------------
+SOURCES += [
+    {
+        "slug": "nhse_rtt_published_2026-09",
+        "publisher": "NHS England",
+        "publication_name": "RTT Waiting Times, September 2026 - published workbooks and statistical press notice",
+        "source_page": RTT_2026_27,
+        "vintage": "as first published",
+        "files": [
+            ("Sep26-RTT-SPN-publication-PDF-391K-ojyW5x.pdf",
+             f"{NHSE}/2026/11/Sep26-RTT-SPN-publication-PDF-391K-ojyW5x.pdf",
+             "Statistical press notice, September 2026: NHS England's own headline wording and figures."),
+            ("Incomplete-Provider-Sep26-XLSX-9M-ojyW5x.xlsx",
+             f"{NHSE}/2026/11/Incomplete-Provider-Sep26-XLSX-9M-ojyW5x.xlsx",
+             "Published provider-level incomplete pathways, September 2026: the Gate A target for the new month."),
+            ("RTT-Overview-Timeseries-Including-Estimates-for-Missing-Trusts-Sep26-XLS-140K-ojyW5x.xlsx",
+             f"{NHSE}/2026/11/RTT-Overview-Timeseries-Including-Estimates-for-Missing-Trusts-Sep26-XLS-140K-ojyW5x.xlsx",
+             "England headline series to September 2026. Republishes every earlier month, so it is where a back-series restatement would show."),
+            ("Missing-data-adjustments-to-Sep26-XLSX-105K-ojyW5x.xlsx",
+             f"{NHSE}/2026/11/Missing-data-adjustments-to-Sep26-XLSX-105K-ojyW5x.xlsx",
+             "Which trusts NHS England estimated in each month to September 2026, and by how much."),
+        ],
+        "grain": "England / provider; headline and adjustments",
+        "primary": True,
+        "reuse_from": None,
+    },
+    {
+        "slug": "nhse_wlmds_2026-09",
+        "publisher": "NHS England",
+        "publication_name": "Waiting List Minimum Data Set (WLMDS) summary, to 27 September 2026",
+        "source_page": "https://www.england.nhs.uk/statistics/statistical-work-areas/rtt-waiting-times/wlmds/",
+        "vintage": "management information (NHS England: 'should be treated with caution')",
+        "files": [
+            ("WLMDS-Summary-to-27-September-2026.xlsx",
+             f"{NHSE}/2026/11/WLMDS-Summary-to-27-September-2026.xlsx",
+             "Weekly patient-level collection, summarised to the week ending 27 September 2026."),
+        ],
+        "grain": "England / provider / treatment function x week ending",
+        "primary": True,
+        "reuse_from": None,
+    },
+    {
+        "slug": "nhse_cwt_2026-09",
+        "publisher": "NHS England",
+        "publication_name": "Cancer Waiting Times, September 2026 (Provisional), released 12 November 2026",
+        "source_page": CWT_2026_27,
+        "vintage": "provisional",
+        "files": [
+            ("Cancer-Waiting-Times-Statistical-Release-September-2026-Provider-based-Provisional.pdf",
+             f"{NHSE}/2026/11/Cancer-Waiting-Times-Statistical-Release-September-2026-Provider-based-Provisional.pdf",
+             "Statistical release, September 2026: NHS England's own headline for 62-day and 28-day FDS."),
+            ("September-2026-Monthly-Combined-CSV-Provisional.csv",
+             f"{NHSE}/2026/11/September-2026-Monthly-Combined-CSV-Provisional.csv",
+             "Single-month Combined CSV, September 2026."),
+            ("2026-27-Apr-Sep-Cumulative-Monthly-Combined-CSV-Provisional.csv",
+             f"{NHSE}/2026/11/2026-27-Apr-Sep-Cumulative-Monthly-Combined-CSV-Provisional.csv",
+             "April-September 2026 Combined CSV. Republishes April-August, so it shows any change to the months the article used."),
+            ("CWT-CRS-National-Time-Series-Oct-2009-Sep-2026-Provisional.xlsx",
+             f"{NHSE}/2026/11/CWT-CRS-National-Time-Series-Oct-2009-Sep-2026-Provisional.xlsx",
+             "NHS England's published national series, provisional basis: the gate target for September."),
+            ("CWT-CRS-National-Time-Series-Oct-2009-Sep-2026-with-Revisions.xlsx",
+             f"{NHSE}/2026/11/CWT-CRS-National-Time-Series-Oct-2009-Sep-2026-with-Revisions.xlsx",
+             "The same series with revisions applied: separates scheduled provisional-to-final changes from anything else."),
+        ],
+        "grain": "basis (provider/commissioner) x org x standard x cancer type x route x modality x month",
+        "primary": True,
+        "reuse_from": None,
+    },
+    {
+        # September 2025 as FIRST published (provisional, November 2025), so the
+        # September year-on-year is like for like, as August's was. By then NHS
+        # England had moved to the Combined CSV layout. The file is named
+        # "Monthly-CSV.csv", like the August 2025 page's do-not-analyse format
+        # illustration, but it sits in the 2025/11 folder and its Period column
+        # reads 01/09/2025 (checked 15 Nov 2026); Silver asserts the period too.
+        "slug": "nhse_cwt_2025-09_provisional",
+        "publisher": "NHS England",
+        "publication_name": "Cancer Waiting Times, September 2025 (Provisional), released November 2025",
+        "source_page": "https://www.england.nhs.uk/statistics/2025-26-monthly-cancer-waiting-times-statistics/",
+        "vintage": "provisional (superseded by the 2025-26 Final file)",
+        "files": [
+            ("Cancer-Waiting-Times-Statistical-Release-September-2025-Provider-based-Provisional.pdf",
+             f"{NHSE}/2025/11/Cancer-Waiting-Times-Statistical-Release-September-2025-Provider-based-Provisional.pdf",
+             "Statistical release for September 2025 as first published."),
+            ("Monthly-CSV.csv",
+             f"{NHSE}/2025/11/Monthly-CSV.csv",
+             "September 2025 Monthly Combined CSV, provisional (Combined CSV layout)."),
+        ],
+        "grain": "basis (provider/commissioner) x org x standard x cancer type x route x modality",
         "primary": True,
         "reuse_from": None,
     },
