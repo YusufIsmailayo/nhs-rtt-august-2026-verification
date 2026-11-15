@@ -304,3 +304,44 @@ SOURCES += [
         "reuse_from": None,
     },
 ]
+
+# ----------------------------------------------------------------------------
+# Evidence for the flows piece (branch flows-2026), retrieved 15 November 2026.
+# These are documents, not data: what NHS England and OSR say "derived
+# unreported completed pathways and removals" are, and why pathways close. The
+# web pages change over time, so the SHA-256 in metadata.json is a dated
+# snapshot of what each said on the day I read it.
+# ----------------------------------------------------------------------------
+OSR = "https://osr.statisticsauthority.gov.uk/wp-content/uploads/sites/3"
+SOURCES += [
+    {
+        "slug": "nhse_evidence_flows_2026-11",
+        "publisher": "NHS England; Office for Statistics Regulation",
+        "publication_name": "Definitions and correspondence on unreported removals and pathway closures",
+        "source_page": "https://osr.statisticsauthority.gov.uk/organisation/nhs-england/",
+        "vintage": "snapshot retrieved 15 November 2026",
+        "files": [
+            ("20260414-Unreported-Removals-Summary.docx",
+             f"{NHSE}/2026/04/20260414-Unreported-Removals-Summary.docx",
+             "NHS England, 'Derived unreported removals' explainer (file dated 14 April 2026), linked from the RTT rules and guidance page."),
+            ("NHSE_Chris_Roebuck_to_Siobhan_Tuohy-Smith_RTT_CR_addressing_recommendations_2026-10-21.pdf",
+             f"{OSR}/2026/11/Chris_Roebuck_to_Siobhan_Tuohy-Smith_NHS_England_RTT_CR_adressing_recommendations.pdf",
+             "NHS England (Chris Roebuck) to OSR, letter dated 21 October 2026, published by OSR 6 November 2026; annex on recommendation 3, unreported removals."),
+            ("OSR_Siobhan_Tuohy-Smith_to_Chris_Roebuck_RTT_CR_implementing_recommendations_2026-11-06.pdf",
+             f"{OSR}/2026/11/Siobhan_Tuohy-Smith_to_Chris_Roebuck_NHS_England_RTT_CR_implementing_recommendations.pdf",
+             "OSR (Siobhan Tuohy-Smith) to NHS England, letter dated 6 November 2026, on implementation of the RTT compliance review recommendations."),
+            ("NHSE_response_to_OSR_compliance_review_recommendations_page.html",
+             "https://www.england.nhs.uk/statistics/statistical-work-areas/rtt-waiting-times/osr-compliance-assessment/",
+             "NHS England web page 'Response to OSR compliance review recommendations', snapshot."),
+            ("NHSE_RTT_statistics_user_guidance_page.html",
+             "https://www.england.nhs.uk/statistics/statistical-work-areas/rtt-waiting-times/rtt-statistics-user-guidance/",
+             "NHS England RTT statistics user guidance (key terms: RTT clock stop, completed non-admitted pathway, unreported removals), snapshot."),
+            ("NHSE_RTT_rules_and_guidance_page.html",
+             "https://www.england.nhs.uk/statistics/statistical-work-areas/rtt-waiting-times/rtt-guidance/",
+             "NHS England RTT rules and guidance page ('Derived unreported removals' section and explainer link), snapshot."),
+        ],
+        "grain": "documents",
+        "primary": True,
+        "reuse_from": None,
+    },
+]
