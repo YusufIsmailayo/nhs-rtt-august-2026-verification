@@ -15,3 +15,19 @@ __pycache__/
 HANDOFF.md
 article/
 Claude outputs/
+
+# --- Never commit: secrets, working notes, drafts, private folders ---
+.env
+.env.*
+*.pem
+*.key
+credentials*.json
+token*.json
+.streamlit/secrets.toml
+HANDOFF*.md
+*handoff*
+social/
+writing/
+drafts/
+_local/
+outreach/
